@@ -1,0 +1,118 @@
+.home-block {
+  padding: 120px 0px 120px 0px;
+  background-color: $gray;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+.home-block-left {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+
+  &__title {
+    text-transform: uppercase;
+    @include responsiveSize("font-size", 18, 16);
+    color: $black;
+    @include responsiveSize("margin-bottom", 20, 20);
+    line-height: 130%;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 260px;
+    @include responsiveSize("font-size", 13, 13);
+    text-align: center;
+    @include responsiveSize("margin-bottom", 20, 20);
+    line-height: 130%;
+  }
+
+  &__input {
+    border: 2px solid $gray;
+    padding: 10px;
+    @include responsiveSize("margin-bottom", 15, 15);
+    width: 100%;
+  }
+
+  &__btn {
+    @include responsiveSize("margin-top", 15, 15);
+  }
+}
+.home-block-right {
+  width: 100%;
+  max-width: 500px;
+
+  &__title {
+    text-transform: uppercase;
+    color: $black;
+    @include responsiveSize("font-size", 30, 30);
+    @include responsiveSize("margin-bottom", 20, 20);
+    line-height: 130%;
+  }
+
+  &__subtitle {
+    @include responsiveSize("margin-bottom", 50, 50);
+    @include responsiveSize("font-size", 18, 18);
+    h3 {
+      display: inline;
+      background-color: $red;
+      color: $white;
+      padding: 0px 0px 0px 5px;
+      line-height: 130%;
+    }
+  }
+
+  &__text {
+    @include responsiveSize("font-size", 18, 18);
+    color: $black;
+    @include responsiveSize("margin-bottom", 20, 20);
+    line-height: 130%;
+    span {
+      background: $orange;
+      color: white;
+    }
+  }
+
+  &__countdown {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.btn-primary {
+  button {
+    text-transform: uppercase;
+    background-color: $orange;
+    color: $white;
+    padding: 10px 20px 10px 20px;
+    transition: all 0.7s ease;
+    @include responsiveSize("font-size", 14, 14);
+    &:hover {
+      background-color: $mainColor;
+      color: $white;
+    }
+  }
+}
+
+.btn-primary-link {
+  a {
+    text-transform: uppercase;
+    background-color: $orange;
+    color: $white;
+    padding: 10px 20px 10px 20px;
+    transition: all 0.7s ease;
+    @include responsiveSize("font-size", 14, 14);
+    &:hover {
+      background-color: $mainColor;
+      color: $white;
+    }
+  }
+}

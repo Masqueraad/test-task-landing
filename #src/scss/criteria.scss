@@ -1,0 +1,47 @@
+.criteria-block {
+  padding: 120px 0px 120px 0px;
+  &__main-title {
+    @include responsiveSize("margin-bottom", 80, 80);
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px -20px 40px -20px;
+  }
+
+  &__colums {
+    flex: 29%;
+    margin: 0px 20px 0px 20px;
+    background-color: $gray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+  }
+
+  &__icon {
+    @include responsiveSize("margin-bottom", 30, 30);
+  }
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    color: $black;
+    font-weight: 700;
+    @include responsiveSize("margin-bottom", 30, 30);
+  }
+
+  &__text {
+    text-align: center;
+    flex: 1 1 auto;
+    line-height: 130%;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    @include responsiveSize("margin-top", 60, 60);
+  }
+}

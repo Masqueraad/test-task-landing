@@ -1,0 +1,41 @@
+.feedback-blok {
+  padding: 120px 0px 120px 0px;
+
+  &__title {
+    @include responsiveSize("margin-bottom", 80, 80);
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+
+  &__colums {
+    flex: 29%;
+    margin: 0 20px;
+  }
+
+  &__text {
+    flex: 1 1 auto;
+    font-style: italic;
+    line-height: 130%;
+    @include responsiveSize("margin-bottom", 50, 50);
+  }
+
+  &__name {
+    color: $black;
+    font-weight: 700;
+    @include responsiveSize("margin-bottom", 5, 5);
+  }
+
+  &__name-description {
+    @include responsiveSize("font-size", 12, 12);
+    @include responsiveSize("margin-bottom", 50, 50);
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+  }
+}

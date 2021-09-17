@@ -3,10 +3,11 @@
   max-width: $maxWidthContainer + px;
   margin: 0 auto;
   padding: 0 15px;
-  @media (min-width: 1400px) {
-  }
+  //   @media (min-width: 1400px) {
+  //     max-width: 1320px;
+  //   }
   @media (min-width: 1200px) {
-    max-width: 1170px;
+    max-width: 1140px;
   }
   @media (min-width: 992px) {
     max-width: 960px;
