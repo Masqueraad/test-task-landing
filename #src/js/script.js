@@ -17,6 +17,5 @@ testWebP(function (support) {
 });
 
 
-@@include("header.js")
-@@include("slider.js")
-@@include("tabs.js")
+
+@@include("countdown.js")

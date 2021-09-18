@@ -20,13 +20,14 @@
     flex: 1 1 auto;
     font-style: italic;
     line-height: 130%;
-    @include responsiveSize("margin-bottom", 50, 50);
+    @include responsiveSize("margin-bottom", 50, 25);
   }
 
   &__name {
     color: $black;
     font-weight: 700;
     @include responsiveSize("margin-bottom", 5, 5);
+    @include responsiveSize("font-size", 16, 12);
   }
 
   &__name-description {
@@ -37,5 +38,20 @@
   &__btn {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .feedback-blok {
+    &__row {
+      flex-direction: row;
+    }
+  }
+}
+@media (min-width: 320px) {
+  .feedback-blok {
+    &__row {
+      flex-direction: column;
+    }
   }
 }

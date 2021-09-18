@@ -13,7 +13,6 @@
 
 .strategy-block-column {
   display: flex;
-  flex: 1 1 20%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -70,10 +69,6 @@
     margin: 0 -20px;
   }
 
-  &__left {
-    margin: 0 20px;
-  }
-
   &__img {
     img {
       width: 100%;
@@ -99,7 +94,7 @@
       position: relative;
       padding: 0px 0px 0px 25px;
       width: 100%;
-      max-width: 300px;
+      @include responsiveSize("margin-bottom", 10, 10);
 
       &::before {
         content: "";
@@ -115,5 +110,59 @@
 
   &__btn {
     align-self: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .strategy-block-column {
+    margin: 0px 20px 0px 20px;
+  }
+  .mentor-block {
+    &__left {
+      margin: 0 20px 0px 20px;
+    }
+    &__list {
+      li {
+        max-width: 300px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .strategy-block-column {
+    flex: 1 1 20%;
+  }
+}
+@media (min-width: 576px) {
+  .strategy-block {
+    &__row {
+      flex-direction: row;
+    }
+  }
+  .strategy-block-column {
+    flex: 1 1 40%;
+  }
+}
+@media (min-width: 320px) {
+  .strategy-block {
+    &__row {
+      flex-direction: column;
+    }
+  }
+  .strategy-block-column {
+    margin: 0px 20px 20px 20px;
+  }
+  .mentor-block {
+    &__left {
+      margin: 0 20px 60px 20px;
+    }
+    &__list {
+      li {
+        max-width: none;
+      }
+    }
+    &__btn {
+      @include responsiveSize("margin-top", 40, 40);
+    }
   }
 }

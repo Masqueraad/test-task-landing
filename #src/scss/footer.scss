@@ -1,0 +1,84 @@
+.footer {
+  padding: 120px 0px 0px 0px;
+  background-color: $gray;
+
+  &__title {
+    @include responsiveSize("font-size", 30, 30);
+    text-align: center;
+    @include responsiveSize("margin-bottom", 10, 10);
+  }
+
+  &__text {
+    text-align: center;
+    @include responsiveSize("font-size", 12, 12);
+    @include responsiveSize("margin-bottom", 50, 50);
+  }
+
+  &__form-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 -20px;
+  }
+
+  &__input {
+    flex: 1 1 29%;
+    display: block;
+    margin: 0 20px;
+    background-color: transparent;
+    border: 2px solid $orange;
+    padding: 5px 10px 5px 10px;
+    @include responsiveSize("margin-bottom", 30, 30);
+    &:focus {
+      box-shadow: 0 0 10px rgb(0 0 0 / 80%);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    @include responsiveSize("margin-bottom", 100, 100);
+  }
+
+  &__rights-reserved {
+    position: relative;
+    padding: 50px 0px 50px 0px;
+    p {
+      position: relative;
+      z-index: 1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: $black;
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .footer {
+    &__form-row {
+      flex-direction: row;
+    }
+    &__input {
+      max-width: 300px;
+      width: 100%;
+    }
+  }
+}
+@media (min-width: 320px) {
+  .footer {
+    &__form-row {
+      flex-direction: column;
+    }
+    &__input {
+      max-width: none;
+      width: auto;
+    }
+  }
+}
