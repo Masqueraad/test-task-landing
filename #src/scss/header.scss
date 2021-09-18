@@ -1,8 +1,21 @@
 .home-block {
-  padding: 120px 0px 120px 0px;
-  background-color: $gray;
+  @include responsiveSize("padding-top", 120, 50);
+  @include responsiveSize("padding-bottom", 120, 50);
+  background: url("../img/bg.jpg") 0 0 / cover no-repeat;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
   &__row {
+    position: relative;
+    z-index: 2;
     display: flex;
   }
 }
@@ -52,7 +65,7 @@
 
   &__title {
     text-transform: uppercase;
-    color: $black;
+    color: $white;
     @include responsiveSize("font-size", 30, 20);
     @include responsiveSize("margin-bottom", 20, 20);
     line-height: 130%;
@@ -72,7 +85,7 @@
 
   &__text {
     @include responsiveSize("font-size", 18, 16);
-    color: $black;
+    color: $white;
     @include responsiveSize("margin-bottom", 20, 20);
     line-height: 130%;
     span {
@@ -125,6 +138,7 @@
   &__time-tracker {
     @include responsiveSize("font-size", 40, 30);
     margin: 0px 15px 0px 15px;
+    color: $white;
   }
   &__text {
     text-transform: uppercase;
@@ -133,6 +147,7 @@
   }
   &__time-wrapper {
     text-align: center;
+    color: $white;
   }
 }
 
@@ -145,6 +160,7 @@
   }
   .home-block-right {
     margin-bottom: 0px;
+    text-align: left;
   }
 }
 
@@ -157,5 +173,6 @@
   }
   .home-block-right {
     margin-bottom: 40px;
+    text-align: center;
   }
 }

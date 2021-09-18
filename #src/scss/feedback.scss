@@ -1,5 +1,6 @@
 .feedback-blok {
-  padding: 120px 0px 120px 0px;
+  @include responsiveSize("padding-top", 120, 50);
+  @include responsiveSize("padding-bottom", 120, 50);
 
   &__title {
     @include responsiveSize("margin-bottom", 80, 80);
@@ -12,7 +13,7 @@
   }
 
   &__colums {
-    flex: 29%;
+    flex: 1 1 29%;
     margin: 0 20px;
   }
 
@@ -46,12 +47,18 @@
     &__row {
       flex-direction: row;
     }
+    &__colums {
+      text-align: left;
+    }
   }
 }
 @media (min-width: 320px) {
   .feedback-blok {
     &__row {
       flex-direction: column;
+    }
+    &__colums {
+      text-align: center;
     }
   }
 }

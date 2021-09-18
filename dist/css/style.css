@@ -161,11 +161,25 @@ body.lock {
 }
 
 .home-block {
-  padding: 120px 0px 120px 0px;
-  background-color: #f7f7f7;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: url("../img/bg.jpg") 0 0/cover no-repeat;
+  position: relative;
+}
+
+.home-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .home-block__row {
+  position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,7 +243,7 @@ body.lock {
 
 .home-block-right__title {
   text-transform: uppercase;
-  color: #000;
+  color: #fff;
   font-size: 30px;
   margin-bottom: 20px;
   line-height: 130%;
@@ -250,7 +264,7 @@ body.lock {
 
 .home-block-right__text {
   font-size: 18px;
-  color: #000;
+  color: #fff;
   margin-bottom: 20px;
   line-height: 130%;
 }
@@ -314,6 +328,7 @@ body.lock {
 .home-block-right-countdown__time-tracker {
   font-size: 40px;
   margin: 0px 15px 0px 15px;
+  color: #fff;
 }
 
 .home-block-right-countdown__text {
@@ -324,6 +339,7 @@ body.lock {
 
 .home-block-right-countdown__time-wrapper {
   text-align: center;
+  color: #fff;
 }
 
 * {
@@ -436,7 +452,7 @@ h6 {
 }
 
 .strategy-block {
-  padding: 120px 0px 120px 0px;
+  padding-top: 120px;
 }
 
 .strategy-block__title {
@@ -516,7 +532,8 @@ h6 {
 }
 
 .mentor-block {
-  padding: 120px 0px 120px 0px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .mentor-block__row {
@@ -582,7 +599,8 @@ h6 {
 }
 
 .criteria-block {
-  padding: 120px 0px 120px 0px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .criteria-block__main-title {
@@ -651,7 +669,8 @@ h6 {
 }
 
 .feedback-blok {
-  padding: 120px 0px 120px 0px;
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .feedback-blok__title {
@@ -668,9 +687,9 @@ h6 {
 }
 
 .feedback-blok__colums {
-  -webkit-box-flex: 29%;
-      -ms-flex: 29%;
-          flex: 29%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 29%;
+          flex: 1 1 29%;
   margin: 0 20px;
 }
 
@@ -705,20 +724,24 @@ h6 {
 }
 
 .footer {
-  padding: 120px 0px 0px 0px;
-  background-color: #f7f7f7;
+  padding-top: 120px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/bg.jpg") center/cover no-repeat;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.jpg") center/cover no-repeat;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/bg.jpg") center/cover no-repeat;
 }
 
 .footer__title {
   font-size: 30px;
   text-align: center;
   margin-bottom: 10px;
+  color: #fff;
 }
 
 .footer__text {
   text-align: center;
   font-size: 12px;
   margin-bottom: 50px;
+  color: #fff;
 }
 
 .footer__form-row {
@@ -748,6 +771,22 @@ h6 {
 .footer__input:focus {
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.footer__input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.footer__input:-moz-placeholder {
+  color: #fff;
+}
+
+.footer__input::-moz-placeholder {
+  color: #fff;
+}
+
+.footer__input:-ms-input-placeholder {
+  color: #fff;
 }
 
 .footer__btn {
@@ -792,6 +831,7 @@ h6 {
 
   .home-block-right {
     margin-bottom: 40px;
+    text-align: center;
   }
 
   .container {
@@ -835,6 +875,10 @@ h6 {
             flex-direction: column;
   }
 
+  .feedback-blok__colums {
+    text-align: center;
+  }
+
   .footer__form-row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -871,6 +915,10 @@ h6 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+
+  .feedback-blok__colums {
+    text-align: left;
   }
 
   .footer__form-row {
@@ -916,6 +964,7 @@ h6 {
 
   .home-block-right {
     margin-bottom: 0px;
+    text-align: left;
   }
 
   .container {
@@ -942,6 +991,14 @@ h6 {
 }
 
 @media (max-width: 1170px) {
+  .home-block {
+    padding-top: calc( 50px + 70 * ((100vw - 320px) / 850) );
+  }
+
+  .home-block {
+    padding-bottom: calc( 50px + 70 * ((100vw - 320px) / 850) );
+  }
+
   .home-block-left__title {
     font-size: calc( 16px + 2 * ((100vw - 320px) / 850) );
   }
@@ -1014,6 +1071,10 @@ h6 {
     margin-top: calc( 5px + 0 * ((100vw - 320px) / 850) );
   }
 
+  .strategy-block {
+    padding-top: calc( 50px + 70 * ((100vw - 320px) / 850) );
+  }
+
   .strategy-block__title {
     margin-bottom: calc( 80px + 0 * ((100vw - 320px) / 850) );
   }
@@ -1030,12 +1091,28 @@ h6 {
     font-size: calc( 13px + 0 * ((100vw - 320px) / 850) );
   }
 
+  .mentor-block {
+    padding-top: calc( 50px + 70 * ((100vw - 320px) / 850) );
+  }
+
+  .mentor-block {
+    padding-bottom: calc( 50px + 70 * ((100vw - 320px) / 850) );
+  }
+
   .mentor-block__title {
     margin-bottom: calc( 80px + 0 * ((100vw - 320px) / 850) );
   }
 
   .mentor-block__list li {
     margin-bottom: calc( 10px + 0 * ((100vw - 320px) / 850) );
+  }
+
+  .criteria-block {
+    padding-top: calc( 50px + 70 * ((100vw - 320px) / 850) );
+  }
+
+  .criteria-block {
+    padding-bottom: calc( 50px + 70 * ((100vw - 320px) / 850) );
   }
 
   .criteria-block__main-title {
@@ -1052,6 +1129,14 @@ h6 {
 
   .criteria-block__btn {
     margin-top: calc( 60px + 0 * ((100vw - 320px) / 850) );
+  }
+
+  .feedback-blok {
+    padding-top: calc( 50px + 70 * ((100vw - 320px) / 850) );
+  }
+
+  .feedback-blok {
+    padding-bottom: calc( 50px + 70 * ((100vw - 320px) / 850) );
   }
 
   .feedback-blok__title {
@@ -1076,6 +1161,10 @@ h6 {
 
   .feedback-blok__name-description {
     margin-bottom: calc( 50px + 0 * ((100vw - 320px) / 850) );
+  }
+
+  .footer {
+    padding-top: calc( 50px + 70 * ((100vw - 320px) / 850) );
   }
 
   .footer__title {
@@ -1108,3 +1197,11 @@ h6 {
     margin-top: calc( 40px + 0 * ((100vw - 320px) / 850) );
   }
 }
+
+.webp .home-block { background: url(../img/bg.webp) 0 0/cover no-repeat; }
+
+.webp .footer { background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../img/bg.webp) center/cover no-repeat; }
+
+.webp .footer { background: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg.webp) center/cover no-repeat; }
+
+.webp .footer { background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg.webp) center/cover no-repeat; }

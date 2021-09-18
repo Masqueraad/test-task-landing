@@ -1,5 +1,6 @@
 .criteria-block {
-  padding: 120px 0px 120px 0px;
+  @include responsiveSize("padding-top", 120, 50);
+  @include responsiveSize("padding-bottom", 120, 50);
   &__main-title {
     @include responsiveSize("margin-bottom", 80, 80);
   }

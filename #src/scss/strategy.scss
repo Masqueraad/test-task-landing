@@ -1,5 +1,5 @@
 .strategy-block {
-  padding: 120px 0px 120px 0px;
+  @include responsiveSize("padding-top", 120, 50);
   &__title {
     @include responsiveSize("margin-bottom", 80, 80);
   }
@@ -61,7 +61,8 @@
 }
 
 .mentor-block {
-  padding: 120px 0px 120px 0px;
+  @include responsiveSize("padding-top", 120, 50);
+  @include responsiveSize("padding-bottom", 120, 50);
   &__row {
     display: flex;
     justify-content: space-between;

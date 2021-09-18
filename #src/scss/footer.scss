@@ -1,17 +1,20 @@
 .footer {
-  padding: 120px 0px 0px 0px;
-  background-color: $gray;
+  @include responsiveSize("padding-top", 120, 50);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/bg.jpg") center / cover no-repeat;
 
   &__title {
     @include responsiveSize("font-size", 30, 30);
     text-align: center;
     @include responsiveSize("margin-bottom", 10, 10);
+    color: $white;
   }
 
   &__text {
     text-align: center;
     @include responsiveSize("font-size", 12, 12);
     @include responsiveSize("margin-bottom", 50, 50);
+    color: $white;
   }
 
   &__form-row {
@@ -31,6 +34,18 @@
     @include responsiveSize("margin-bottom", 30, 30);
     &:focus {
       box-shadow: 0 0 10px rgb(0 0 0 / 80%);
+    }
+    &::-webkit-input-placeholder {
+      color: $white;
+    }
+    &:-moz-placeholder {
+      color: $white;
+    }
+    &::-moz-placeholder {
+      color: $white;
+    }
+    &:-ms-input-placeholder {
+      color: $white;
     }
   }
 
