@@ -43,7 +43,7 @@
   &__btn {
     display: flex;
     justify-content: center;
-    @include responsiveSize("margin-top", 60, 60);
+    @include responsiveSize("margin-top", 40, 20);
   }
 }
 
