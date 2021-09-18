@@ -34,7 +34,7 @@
     padding: 5px 10px 5px 10px;
     @include responsiveSize("margin-bottom", 30, 30);
     &:focus {
-      box-shadow: 0 0 10px rgb(0 0 0 / 80%);
+      box-shadow: 4px 4px 8px 0px rgba(255, 91, 91, 1);
     }
     &::-webkit-input-placeholder {
       color: $white;

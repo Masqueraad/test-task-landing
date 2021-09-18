@@ -770,8 +770,8 @@ h6 {
 }
 
 .footer__input:focus {
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 4px 4px 8px 0px #ff5b5b;
+          box-shadow: 4px 4px 8px 0px #ff5b5b;
 }
 
 .footer__input::-webkit-input-placeholder {
